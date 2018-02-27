@@ -210,7 +210,6 @@ PlayerSettings:
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
   tvOSLargeIconLayers: []
-  tvOSLargeIconLayers2x: []
   tvOSTopShelfImageLayers: []
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
@@ -718,7 +717,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 4f71004d-10ba-43d4-a57d-5236af33c5d0
-  projectName: 
+  projectName: VRProject2
   organizationId: melant
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
