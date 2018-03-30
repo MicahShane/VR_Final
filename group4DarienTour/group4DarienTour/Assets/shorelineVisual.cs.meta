@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 381cf65670e518042902bd26f6091103
+timeCreated: 1520337497
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shore1800_Prefab: {fileID: 1996277127266646, guid: 57085a43df929414a991cdce30fee361,
+      type: 2}
+  - shore1930_Prefab: {fileID: 1000888234419342, guid: b98f2ac8a78556a42b384aa2615b98e8,
+      type: 2}
+  - shore2000_Prefab: {fileID: 1131385359295914, guid: c090afe365d203443ab36d4ef8722775,
+      type: 2}
+  - leftHand: {fileID: 1340816962816304, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
+  - rightHand: {fileID: 1090384901247114, guid: 402873b51c5b1724796c42f3ef15d0e1,
+      type: 2}
+  - dlog: {instanceID: 0}
+  - dscript: {instanceID: 0}
+  - sl: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
