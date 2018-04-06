@@ -33,38 +33,45 @@ public class shorelineVisual : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
-		{
-			dscript.logEvent(this.name);
-			
+    void OnTriggerEnter(Collider col)
+    {
 
-			Debug.Log("counter is: " + counter);
+        if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
+        {
 
-			if (counter == 0)
-			{
-				
-				sl = Instantiate(shore1800_Prefab);
-				counter++;
-			}
-			else if (counter == 1)
-			{
-				
-				Destroy(sl);
-				sl = Instantiate(shore1930_Prefab);
-				counter++;
+            dscript.logEvent(this.name);
 
-			} else if (counter == 2){
-				Destroy(sl);
-				sl = Instantiate(shore2000_Prefab);
-				counter++;
 
-			}else{
-				Destroy (sl);
-				counter = 0;
-	}
-		}
+            Debug.Log("counter is: " + counter);
 
-}
+            if (counter == 0)
+            {
+
+                sl = Instantiate(shore1800_Prefab);
+                counter++;
+            }
+            else if (counter == 1)
+            {
+
+                Destroy(sl);
+                sl = Instantiate(shore1930_Prefab);
+                counter++;
+
+            }
+            else if (counter == 2)
+            {
+                Destroy(sl);
+                sl = Instantiate(shore2000_Prefab);
+                counter++;
+
+            }
+            else
+            {
+                Destroy(sl);
+                counter = 0;
+            }
+        }
+    }
+
+
 }
