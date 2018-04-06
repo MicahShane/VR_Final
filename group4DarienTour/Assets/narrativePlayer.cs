@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class narrativePlayer : MonoBehaviour {
 	public AudioSource narrative;
-	public GameObject leftHand;
-	public GameObject rightHand;
-	public string lhName;
-	public string rhName;
+	public GameObject Microphone;
+	public string micName;
+
 	public float playTime;
 	public float initTime;
 
@@ -17,8 +16,8 @@ public class narrativePlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		lhName = leftHand.name;
-		rhName = rightHand.name;
+		micName = Microphone.name;
+		
 		narrative = GetComponent<AudioSource>();
 		initTime = playTime;
 		dscript = dlog.GetComponent<dataLog>();
@@ -37,7 +36,7 @@ public class narrativePlayer : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
+		if (col.gameObject.name.Equals(micName))
 		{
 			dscript.logEvent(this.name);
 

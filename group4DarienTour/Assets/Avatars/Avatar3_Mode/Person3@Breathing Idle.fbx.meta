@@ -186,35 +186,35 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bodymat
-    second: {fileID: 2100000, guid: ce244ff91097db242b8253ce31db2c8a, type: 2}
+    second: {fileID: 2100000, guid: f0628f1809c6e4442a719b4cb3a0d23a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bottommat
-    second: {fileID: 2100000, guid: 173c5165774201d4eb1e4f85ceb08457, type: 2}
+    second: {fileID: 2100000, guid: 650759e241593574f8ae25016e3383d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Eyewearmat
-    second: {fileID: 2100000, guid: f48b60c641acec44d839e810fc85a7a1, type: 2}
+    second: {fileID: 2100000, guid: 9e6d385a5bd35bb4c8421b9069e59838, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hairmat
-    second: {fileID: 2100000, guid: 779c098908f26ae48b0e94d524bd0c30, type: 2}
+    second: {fileID: 2100000, guid: bd3ed017aa0990b4eb928dcd1a3ca616, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Shoesmat
-    second: {fileID: 2100000, guid: fa025d3907c3c10448b3b79de2e2e93e, type: 2}
+    second: {fileID: 2100000, guid: 3fe70aabad2336643b0389696d95b6d3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Topmat
-    second: {fileID: 2100000, guid: be9c230c515bae44aab0945511ff4dfa, type: 2}
+    second: {fileID: 2100000, guid: 78f3dc5eccc4be94bb1763fafa61b025, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 0
   animations:
@@ -242,7 +242,7 @@ ModelImporter:
       name: Breathing Idle
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 298
+      lastFrame: 139
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

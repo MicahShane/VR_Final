@@ -1,11 +1,18 @@
 fileFormatVersion: 2
 guid: f9e93ec2ac0f346499ccc71c1249af73
-timeCreated: 1520344140
+timeCreated: 1522971781
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dlog: {instanceID: 0}
+  - leftHand: {fileID: 1910762269721904, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  - rightHand: {fileID: 1820349169644530, guid: 792c76e0d900ff44b80bc8f89748e580,
+      type: 2}
+  - vrCameraRig: {instanceID: 0}
+  - nonVRCameraRig: {instanceID: 0}
+  - dscript: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
