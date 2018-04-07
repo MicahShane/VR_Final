@@ -22,7 +22,6 @@ public class floodSim : MonoBehaviour {
 		dscript = dlog.GetComponent<dataLog>();
 	}
 	
-	
 
 	 void OnTriggerStay(Collider col)
 	{

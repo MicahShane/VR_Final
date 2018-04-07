@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MakeTalk : MonoBehaviour {
 
-	public GameObject Microphone;
-	public string micName;
 	public Animator anim;
 	public bool talk;
 	
