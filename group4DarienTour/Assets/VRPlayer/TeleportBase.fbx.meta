@@ -1,9 +1,16 @@
 fileFormatVersion: 2
-guid: 14d88f06c47d2904b9b30b5c73cadbc1
-timeCreated: 1522967710
+guid: e62a719aeb5d59048a0369dc8b0fb4a2
+timeCreated: 1523342102
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2100000: No Name
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Circle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -78,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
