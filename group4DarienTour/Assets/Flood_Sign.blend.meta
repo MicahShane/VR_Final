@@ -128,52 +128,52 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BoxGreen
-    second: {fileID: 2100000, guid: f342ea82ec2b6ab4d8357908feae3be6, type: 2}
+    second: {fileID: 2100000, guid: 7659da463fd396a43a57dbe4a5bffca3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cap_Green
-    second: {fileID: 2100000, guid: 792e0dddb0587bc48acaf972ebafa6f7, type: 2}
+    second: {fileID: 2100000, guid: 64d3bff2f8adf2242850f58a4bd25a80, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pole_Green
-    second: {fileID: 2100000, guid: 9bcf6cac4119a294196868e2f3f83197, type: 2}
+    second: {fileID: 2100000, guid: 14ad399e6d67980439d144129b2e4317, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SVGMat_001
-    second: {fileID: 2100000, guid: a15ae0a52aea8694b8bd9c5c9029ad71, type: 2}
+    second: {fileID: 2100000, guid: 09ad3750bfeee574298f110f14440d81, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SVGMat_003
-    second: {fileID: 2100000, guid: 4d6128bf4b897564ab7997c9f28fcecb, type: 2}
+    second: {fileID: 2100000, guid: a86932a81ca578743bb49d8ab168afff, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SVGMat_005
-    second: {fileID: 2100000, guid: ad1b37bdceadba945a10eac2b44c619f, type: 2}
+    second: {fileID: 2100000, guid: 473ce5d1e17cace45ae720acb17b6910, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SVGMat_007
-    second: {fileID: 2100000, guid: f8f8f417992e20448a2ece2458849c5e, type: 2}
+    second: {fileID: 2100000, guid: b793f7a7e4846b24491ac67d3b2e04a0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TextGold
-    second: {fileID: 2100000, guid: 20bd063fe10930640b9842e532967907, type: 2}
+    second: {fileID: 2100000, guid: bb652871f1856b948b1cf0ccd86b8af3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: unnamed
-    second: {fileID: 2100000, guid: 3018049636601c6478b2c69bedc55acf, type: 2}
+    second: {fileID: 2100000, guid: da3fb500ebe6b6341a0aca7f87b7bbcb, type: 2}
   materials:
     importMaterials: 1
-    materialName: 2
-    materialSearch: 2
-    materialLocation: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
