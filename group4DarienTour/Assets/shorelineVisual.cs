@@ -36,7 +36,7 @@ public class shorelineVisual : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
 
-        if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
+        if (col.gameObject.name.Equals(rhName))
         {
 
             dscript.logEvent(this.name);

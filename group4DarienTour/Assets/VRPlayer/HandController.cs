@@ -42,9 +42,11 @@ public class HandController : MonoBehaviour {
 		attachPoint.localRotation = Quaternion.identity;
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+   
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 

@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.VR;
 using UnityEngine.Networking;
 public class VRPlayer : NetworkBehaviour {
-	public GameObject cubePrefab; 
+	public GameObject cubePrefab;
+    public GameObject microphone;
+    public GameObject Ourcamera;
 	public Blinker hmdBlinker;
 	public Transform SteamVR_Rig;
 	public SteamVR_TrackedObject hmd;
@@ -18,6 +20,7 @@ public class VRPlayer : NetworkBehaviour {
 	public LocomotionMode locomotionMode = LocomotionMode.JOYSTICK_DRIVE;
 	public Vector3 lastHipPosition;
 	public bool isWalking;
+    public bool isHoldingMicrophone;
 	// Use this for initialization
 	[SyncVar]
 	Vector3 headPos;
@@ -33,12 +36,45 @@ public class VRPlayer : NetworkBehaviour {
 	Quaternion rightHandRot;
 	void Start () {
 		head.transform.position = new Vector3(0, 2, 0);
+        isHoldingMicrophone = true;
+        Ourcamera.SetActive(false);
 	}
 	
 	void Update () {
 	
 	}
-	private void FixedUpdate()
+
+
+    private void LateUpdate()
+    {
+
+       
+
+            //left hand hold
+            if (Input.GetButtonDown("YButton"))
+            {
+                if (isHoldingMicrophone)
+                {
+                    microphone.SetActive(false);
+                    Ourcamera.SetActive(true);
+                    isHoldingMicrophone = false;
+                }
+                else
+                {
+                    Ourcamera.SetActive(false);
+                    microphone.SetActive(true);
+                    isHoldingMicrophone = true;
+                }
+                //saveMaxLeft = leftHand.intersected.maxAngularVelocity;
+                //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
+            }
+            
+
+            
+        
+    }
+
+    private void FixedUpdate()
 	{
 		if (isLocalPlayer)
 		{
