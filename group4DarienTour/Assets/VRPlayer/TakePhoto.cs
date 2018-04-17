@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
-
+using UnityEngine.Networking;
 public class TakePhoto : MonoBehaviour
 {
     Texture2D screenCap;
@@ -12,6 +12,8 @@ public class TakePhoto : MonoBehaviour
     private int index;
     public GameObject ourHand;
     public GameObject ourCamera;
+    private NetworkManagerHUD hud;
+    public  GameObject OurButton;
     public GameObject[] cameraPeices;
 
     // Use this for initialization
@@ -22,9 +24,10 @@ public class TakePhoto : MonoBehaviour
         border = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false); // 2
         border.Apply();
         index = 0;
-        
+        OurButton = GameObject.Find("Button");
+        hud =FindObjectOfType<NetworkManagerHUD>();
     }
-
+    
     
     void OnTriggerEnter(Collider col)
     {
@@ -36,6 +39,9 @@ public class TakePhoto : MonoBehaviour
                 MeshRenderer r = i.GetComponent<MeshRenderer>();
                 r.enabled = false;
             }
+            hud.showGUI = false;
+            OurButton.SetActive(false);
+
             StartCoroutine("Capture");
         }
     }
@@ -60,5 +66,7 @@ public class TakePhoto : MonoBehaviour
             MeshRenderer r = i.GetComponent<MeshRenderer>();
             r.enabled = true;
         }
+        hud.showGUI = true;
+        OurButton.SetActive(true);
     }
 }

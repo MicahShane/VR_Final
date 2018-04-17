@@ -2216,6 +2216,7 @@ MonoBehaviour:
   rhName: 
   ourHand: {fileID: 1471708500973870}
   ourCamera: {fileID: 1349736025364496}
+  OurButton: {fileID: 0}
   cameraPeices:
   - {fileID: 1432332692909622}
   - {fileID: 1293403807133828}
