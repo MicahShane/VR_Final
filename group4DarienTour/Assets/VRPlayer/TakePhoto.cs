@@ -19,6 +19,10 @@ public class TakePhoto : MonoBehaviour
     public GameObject[] cameraPeices;
     public AudioClip shutter;
     AudioSource audioSource;
+    //public Material myMat;
+    public float totalSeconds;     // The total of seconds the flash wil last
+    public float maxIntensity;     // The maximum intensity the flash will reach
+    public Light myLight;        // Your light
 
 
     // Use this for initialization
@@ -33,8 +37,8 @@ public class TakePhoto : MonoBehaviour
         hud =FindObjectOfType<NetworkManagerHUD>();
         audioSource = GetComponent<AudioSource>();
     }
-    
-    
+
+
     void OnTriggerEnter(Collider col)
     {
         
@@ -50,14 +54,20 @@ public class TakePhoto : MonoBehaviour
             hud.showGUI = false;
             OurButton.SetActive(false);
            
-
             StartCoroutine("Capture");
+  
         }
+    }
+    IEnumerator flash() {
+        myLight.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.7f);
+        myLight.gameObject.SetActive(false);
     }
 
     IEnumerator Capture()
     {
         audioSource.Play();
+        StartCoroutine("flash");
         yield return new WaitForEndOfFrame();
         screenCap.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         screenCap.Apply();
@@ -78,5 +88,6 @@ public class TakePhoto : MonoBehaviour
         }
         hud.showGUI = true;
         OurButton.SetActive(true);
+
     }
 }
