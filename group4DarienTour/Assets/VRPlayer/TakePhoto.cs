@@ -23,6 +23,7 @@ public class TakePhoto : MonoBehaviour
     public float totalSeconds;     // The total of seconds the flash wil last
     public float maxIntensity;     // The maximum intensity the flash will reach
     public Light myLight;        // Your light
+    public GameObject photo;
 
 
     // Use this for initialization
@@ -53,7 +54,6 @@ public class TakePhoto : MonoBehaviour
             }
             hud.showGUI = false;
             OurButton.SetActive(false);
-           
             StartCoroutine("Capture");
   
         }
@@ -75,10 +75,9 @@ public class TakePhoto : MonoBehaviour
         // Encode texture into PNG
         byte[] bytes = screenCap.EncodeToPNG();
         //Object.Destroy(screenCap);
-        string path = "/SavedScreen_"+ index + ".png";
+        string path = Application.dataPath + "/Resources/SavedScreen_" + index + ".png";
         // For testing purposes, also write to a file in the project folder
-        File.WriteAllBytes(Application.dataPath + path, bytes);
-        index++;
+        File.WriteAllBytes(path, bytes);
         shot = true;
         ourHand.GetComponent<MeshRenderer>().enabled = true;
         foreach (GameObject i in cameraPeices)
@@ -86,8 +85,18 @@ public class TakePhoto : MonoBehaviour
             MeshRenderer r = i.GetComponent<MeshRenderer>();
             r.enabled = true;
         }
+        GameObject pic = Instantiate(photo, ourHand.transform.position, ourHand.transform.rotation);
+        if (System.IO.File.Exists(path)) {
+            Debug.Log("exist lol");
+        }
+        var bytes1 = System.IO.File.ReadAllBytes(path);
+        var tex = new Texture2D(1, 1);
+        tex.LoadImage(bytes1);
+        pic.GetComponent<Renderer>().material.mainTexture = tex;
         hud.showGUI = true;
+        index++;
         OurButton.SetActive(true);
 
     }
 }
+

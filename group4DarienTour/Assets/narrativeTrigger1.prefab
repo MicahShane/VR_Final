@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913821939617368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: 1.632, z: 12.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 211.01, y: 3.2350004, z: 51.785995}
+  m_LocalScale: {x: 0.37109816, y: 0.37109816, z: 0.37109816}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0131925, y: 1, z: 1}
+  m_Center: {x: -0.0065966374, y: 0, z: 0}
 --- !u!82 &82883721048156128
 AudioSource:
   m_ObjectHideFlags: 1
@@ -117,7 +117,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.5831604
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -202,9 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrative: {fileID: 82883721048156128}
-  leftHand: {fileID: 1340816962816304, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
-  rightHand: {fileID: 1090384901247114, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
-  lhName: 
-  rhName: 
+  Microphone: {fileID: 0}
+  micName: 
   playTime: 9
   initTime: 0
+  dlog: {fileID: 0}
+  dscript: {fileID: 0}

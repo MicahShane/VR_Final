@@ -2126,38 +2126,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 4556575678385450, guid: 5cee9490232435f4ca5e76d3704ef595, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.37109816
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556575678385450, guid: 5cee9490232435f4ca5e76d3704ef595, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.37109816
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556575678385450, guid: 5cee9490232435f4ca5e76d3704ef595, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.37109816
+    - target: {fileID: 114681821000230876, guid: 5cee9490232435f4ca5e76d3704ef595,
+        type: 2}
+      propertyPath: Microphone
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114681821000230876, guid: 5cee9490232435f4ca5e76d3704ef595,
         type: 2}
       propertyPath: dlog
       value: 
       objectReference: {fileID: 518761958}
-    - target: {fileID: 65268302754375766, guid: 5cee9490232435f4ca5e76d3704ef595,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.0131925
-      objectReference: {fileID: 0}
-    - target: {fileID: 65268302754375766, guid: 5cee9490232435f4ca5e76d3704ef595,
-        type: 2}
-      propertyPath: m_Center.x
-      value: -0.0065966374
-      objectReference: {fileID: 0}
-    - target: {fileID: 82883721048156128, guid: 5cee9490232435f4ca5e76d3704ef595,
-        type: 2}
-      propertyPath: MinDistance
-      value: 0.5831604
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cee9490232435f4ca5e76d3704ef595, type: 2}
   m_IsPrefabParent: 0
@@ -4679,7 +4657,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: localhost
+  m_NetworkAddress: 172.20.10.2
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1

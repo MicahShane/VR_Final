@@ -2247,6 +2247,7 @@ MonoBehaviour:
   totalSeconds: 5
   maxIntensity: 0
   myLight: {fileID: 108100827318980576}
+  photo: {fileID: 1721775714805924, guid: ff2e2798835c9c746bc9504a7dbeb9ab, type: 2}
 --- !u!114 &114956991445480934
 MonoBehaviour:
   m_ObjectHideFlags: 1
