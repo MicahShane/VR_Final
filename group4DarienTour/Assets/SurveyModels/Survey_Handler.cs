@@ -17,7 +17,7 @@ public class Survey_Handler : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        dlog = GameObject.Find("DataLogger");
         lhName = leftHand.name;
         rhName = rightHand.name;
         dscript = dlog.GetComponent<dataLog>();
@@ -36,6 +36,7 @@ public class Survey_Handler : MonoBehaviour
         if (col.gameObject.name.Equals(rhName) || col.gameObject.name.Equals(lhName))
         {
             Debug.Log("You have selected " + this.gameObject.name);
+            dscript.logEvent(this.name);
             //store some data!!!!!!!!!!!!!!
         }
     }

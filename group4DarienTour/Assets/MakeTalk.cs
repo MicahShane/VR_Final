@@ -10,7 +10,7 @@ public class MakeTalk : MonoBehaviour {
 
 	void start(){
 		anim = GetComponent<Animator>();
-		talk = false;
+        talk = false;
 		anim.SetBool("talk",talk);
 	}
 

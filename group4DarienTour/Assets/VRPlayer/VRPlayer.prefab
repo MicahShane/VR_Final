@@ -408,7 +408,6 @@ GameObject:
   - component: {fileID: 114985164872626490}
   - component: {fileID: 54608750617749164}
   - component: {fileID: 65399791425847244}
-  - component: {fileID: 114048315712422310}
   m_Layer: 0
   m_Name: Hand_Right
   m_TagString: Untagged
@@ -1924,8 +1923,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
@@ -1963,7 +1962,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820349169644530}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.06060476, y: 0.05669266, z: 0.066074826}
@@ -2144,21 +2143,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114048315712422310
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820349169644530}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e3398650f76244bb27fb196bf244fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetDistance: 0
-  ThingToHit: {fileID: 0}
-  ThingToHitName: 
-  MaxRayDistance: 10
 --- !u!114 &114167032657313610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2177,6 +2161,7 @@ MonoBehaviour:
   attachExact: 1
   attachHide: 0
   breakingDist: Infinity
+  lastIntersection: {fileID: 0}
   maxSpeed: 30
   attachedUseGravitySave: 0
   squeezeThreshold: 0.2
@@ -2208,6 +2193,8 @@ MonoBehaviour:
   hmd: {fileID: 0}
   controllerLeft: {fileID: 0}
   controllerRight: {fileID: 0}
+  handModel: {fileID: 1471708500973870}
+  cube: {fileID: 1893267261817080}
   head: {fileID: 4565793777391112}
   handLeft: {fileID: 114167032657313610}
   handRight: {fileID: 114985164872626490}
@@ -2216,6 +2203,8 @@ MonoBehaviour:
   lastHipPosition: {x: 0, y: 0, z: 0}
   isWalking: 0
   isHoldingMicrophone: 0
+  rightHeldObject: {fileID: 0}
+  saveMaxRight: 0
 --- !u!114 &114339749136032010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2243,6 +2232,7 @@ MonoBehaviour:
   - {fileID: 1141268038244916}
   - {fileID: 1791229816974070}
   - {fileID: 1115140744741194}
+  player: {fileID: 114318908100523744}
   shutter: {fileID: 0}
   totalSeconds: 5
   maxIntensity: 0
@@ -2298,6 +2288,7 @@ MonoBehaviour:
   attachExact: 1
   attachHide: 0
   breakingDist: Infinity
+  lastIntersection: {fileID: 0}
   maxSpeed: 30
   attachedUseGravitySave: 0
   squeezeThreshold: 0.2

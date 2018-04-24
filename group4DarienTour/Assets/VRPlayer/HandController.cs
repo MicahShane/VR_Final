@@ -14,7 +14,7 @@ public class HandController : MonoBehaviour {
 	public bool attachExact = true;
 	public bool attachHide = false;
 	public float breakingDist = Mathf.Infinity;
-	private Collider lastIntersection;
+	public Rigidbody lastIntersection;
 	public float maxSpeed = 5.0f; //don't let the object move too fast between frames
 
 	bool attachedKinematicSave;
@@ -90,12 +90,13 @@ public class HandController : MonoBehaviour {
 	
 	private void OnTriggerStay(Collider other)
 	{
-		if (other.attachedRigidbody != null)
-		{
-			lastIntersection = other;
-		}
-	}
-	private void OnTriggerExit()
+        if (lastIntersection == null)
+        {
+            lastIntersection = other.attachedRigidbody;
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
 	{
 		lastIntersection = null;
 	}

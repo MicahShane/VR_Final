@@ -17,6 +17,7 @@ public class TakePhoto : MonoBehaviour
     private NetworkManagerHUD hud;
     public  GameObject OurButton;
     public GameObject[] cameraPeices;
+    public VRPlayer player;
     public AudioClip shutter;
     AudioSource audioSource;
     //public Material myMat;
@@ -42,8 +43,7 @@ public class TakePhoto : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        
-
+        player.shake();
         if (col.gameObject.name.Equals(rhName))
         {
             ourHand.GetComponent<MeshRenderer>().enabled = false;
@@ -75,7 +75,7 @@ public class TakePhoto : MonoBehaviour
         // Encode texture into PNG
         byte[] bytes = screenCap.EncodeToPNG();
         //Object.Destroy(screenCap);
-        string path = Application.dataPath + "/Resources/SavedScreen_" + index + ".png";
+        string path = Application.dataPath + "/Resources/Photo/SavedScreen_" + index + ".png";
         // For testing purposes, also write to a file in the project folder
         File.WriteAllBytes(path, bytes);
         shot = true;
@@ -85,7 +85,9 @@ public class TakePhoto : MonoBehaviour
             MeshRenderer r = i.GetComponent<MeshRenderer>();
             r.enabled = true;
         }
-        GameObject pic = Instantiate(photo, ourHand.transform.position, ourHand.transform.rotation);
+        Vector3 position = ourCamera.transform.position;
+        //position.z += 0.2f;
+        GameObject pic = Instantiate(photo, position, photo.transform.rotation);
         if (System.IO.File.Exists(path)) {
             Debug.Log("exist lol");
         }

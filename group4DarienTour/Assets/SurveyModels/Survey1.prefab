@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 65342087410072288}
   - component: {fileID: 114165676402477150}
   m_Layer: 0
-  m_Name: SurveyAnswerCube3
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 65687097727349722}
   - component: {fileID: 114066986651241612}
   m_Layer: 0
-  m_Name: SurveyAnswerCube5
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 65852872639121272}
   - component: {fileID: 114326952533245638}
   m_Layer: 0
-  m_Name: SurveyAnswerCube1
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 65509986037572648}
   - component: {fileID: 114913964599489478}
   m_Layer: 0
-  m_Name: SurveyAnswerCube2
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 65805925692374546}
   - component: {fileID: 114391420843483766}
   m_Layer: 0
-  m_Name: SurveyAnswerCube4
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,8 +516,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1186060774073234}
   m_LocalRotation: {x: 0.46377417, y: -0.53564686, z: 0.48169494, w: 0.51571894}
-  m_LocalPosition: {x: 68.65, y: 3.91, z: 86.49}
-  m_LocalScale: {x: 0.19692898, y: 0.196929, z: 0.196929}
+  m_LocalPosition: {x: 68.551, y: 3.124, z: 86.487}
+  m_LocalScale: {x: 0.13900387, y: 0.13900387, z: 0.13900387}
   m_Children:
   - {fileID: 4889749285092288}
   - {fileID: 4401029714049964}

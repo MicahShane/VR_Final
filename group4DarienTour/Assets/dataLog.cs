@@ -6,7 +6,7 @@ public class dataLog : MonoBehaviour {
 	char[] csvTokens = new[] { '\"', ',', '\n', '\r' };
 
    
-	public string identifier = "group4";
+	public string identifier = "group1";
 	StreamWriter writer;
 	// Use this for initialization
 	void Start () {
@@ -24,8 +24,8 @@ public class dataLog : MonoBehaviour {
 			endLog();
 			writer = null;
 		}
-		//create a file
-		string filename = Application.persistentDataPath + "/" + identifier +"_" + (long)(System.DateTime.UtcNow.Subtract(new System.DateTime(1970,1,1)).TotalSeconds) +  ".csv";
+        //create a file
+        string filename = Application.dataPath + "/Resources/DataLog/" + identifier +"_" + (long)(System.DateTime.UtcNow.Subtract(new System.DateTime(1970,1,1)).TotalSeconds) +  ".csv";
 		Debug.Log("creating: " + filename);
 		writer = new StreamWriter(filename);
 	}

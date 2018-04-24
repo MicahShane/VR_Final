@@ -12,6 +12,8 @@ public class VRPlayer : NetworkBehaviour {
 	public SteamVR_TrackedObject hmd;
 	public SteamVR_TrackedObject controllerLeft;
 	public SteamVR_TrackedObject controllerRight;
+    public GameObject handModel;
+    public GameObject cube;
 	public Transform head;
 	public HandController handLeft;
 	public HandController handRight;
@@ -21,8 +23,10 @@ public class VRPlayer : NetworkBehaviour {
 	public Vector3 lastHipPosition;
 	public bool isWalking;
     public bool isHoldingMicrophone;
-	// Use this for initialization
-	[SyncVar]
+    public Rigidbody rightHeldObject;
+    public float saveMaxRight;
+    // Use this for initialization
+    [SyncVar]
 	Vector3 headPos;
 	[SyncVar]
 	Quaternion headRot;
@@ -38,7 +42,11 @@ public class VRPlayer : NetworkBehaviour {
 		head.transform.position = new Vector3(0, 2, 0);
         isHoldingMicrophone = true;
         Ourcamera.SetActive(false);
-	}
+        handLeft.transform.position = controllerLeft.transform.position;
+        handRight.transform.position = controllerRight.transform.position;
+        handLeft.transform.rotation = controllerLeft.transform.rotation;
+        handRight.transform.rotation = controllerRight.transform.rotation;
+    }
 	
 	void Update () {
 	
@@ -47,31 +55,68 @@ public class VRPlayer : NetworkBehaviour {
 
     private void LateUpdate()
     {
-
-       
-
-            //left hand hold
-            if (Input.GetButtonDown("YButton"))
+        //left hand hold
+        if (Input.GetButtonDown("YButton"))
+        {
+            if (isHoldingMicrophone)
             {
-                if (isHoldingMicrophone)
-                {
-                    microphone.SetActive(false);
-                    Ourcamera.SetActive(true);
-                    isHoldingMicrophone = false;
-                }
-                else
-                {
-                    Ourcamera.SetActive(false);
-                    microphone.SetActive(true);
-                    isHoldingMicrophone = true;
-                }
-                //saveMaxLeft = leftHand.intersected.maxAngularVelocity;
-                //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
+                microphone.SetActive(false);
+                Ourcamera.SetActive(true);
+                isHoldingMicrophone = false;
             }
-            
+            else
+            {
+                Ourcamera.SetActive(false);
+                microphone.SetActive(true);
+                isHoldingMicrophone = true;
+            }
+            //saveMaxLeft = leftHand.intersected.maxAngularVelocity;
+            //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
+        }
 
-            
-        
+        int rightIndex = (int)controllerRight.index;
+
+        if (rightIndex >= 0)
+        {
+            float rightTrigger = SteamVR_Controller.Input(rightIndex).GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger).magnitude;
+            //right hand hold
+            if (handRight.lastIntersection != null && rightTrigger > .2f && handRight.lastIntersection.CompareTag("photo"))
+            {
+                handModel.SetActive(false);
+                cube.SetActive(false);
+                rightHeldObject = handRight.lastIntersection;
+                saveMaxRight = handRight.lastIntersection.maxAngularVelocity;
+                handRight.lastIntersection.maxAngularVelocity = Mathf.Infinity;
+            }
+            //right hand release
+            if (rightHeldObject != null && rightTrigger <= .2f)
+            {
+                handModel.SetActive(true);
+                cube.SetActive(true);
+                rightHeldObject.velocity = SteamVR_Controller.Input(rightIndex).velocity * 12;
+                rightHeldObject.angularVelocity = SteamVR_Controller.Input (rightIndex).angularVelocity;
+                rightHeldObject.maxAngularVelocity = saveMaxRight;
+                rightHeldObject = null;
+
+            }
+            if (rightHeldObject != null)
+            {
+                rightHeldObject.velocity = (handRight.transform.position - rightHeldObject.position) / Time.deltaTime;
+                float angle;
+                Vector3 axis;
+                Quaternion q = handRight.transform.rotation * (Quaternion.Inverse(rightHeldObject.rotation));
+                q.ToAngleAxis (out angle, out axis);
+                rightHeldObject.angularVelocity =  axis * angle * Mathf.Deg2Rad / Time.deltaTime;
+            }
+
+
+
+        }
+    }
+
+    public void shake() {
+        int i = (int)controllerRight.index;
+        SteamVR_Controller.Input(i).TriggerHapticPulse(500);
     }
 
     private void FixedUpdate()
