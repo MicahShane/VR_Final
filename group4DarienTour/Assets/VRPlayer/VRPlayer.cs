@@ -25,6 +25,7 @@ public class VRPlayer : NetworkBehaviour {
     public bool isHoldingMicrophone;
     public Rigidbody rightHeldObject;
     public float saveMaxRight;
+    public int rightIndex;
     // Use this for initialization
     [SyncVar]
 	Vector3 headPos;
@@ -42,10 +43,55 @@ public class VRPlayer : NetworkBehaviour {
 		head.transform.position = new Vector3(0, 2, 0);
         isHoldingMicrophone = true;
         Ourcamera.SetActive(false);
-        handLeft.transform.position = controllerLeft.transform.position;
-        handRight.transform.position = controllerRight.transform.position;
-        handLeft.transform.rotation = controllerLeft.transform.rotation;
-        handRight.transform.rotation = controllerRight.transform.rotation;
+        rightIndex = 0;
+        if (isLocalPlayer) {
+            if (UnityEngine.XR.XRSettings.enabled) {
+                if (SteamVR_Rig == null) {
+                    GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+                    SteamVR_Rig = gm.vrCameraRig.transform;
+                    hmd = gm.hmd;
+                    controllerLeft = gm.controllerLeft;
+                    controllerRight = gm.controllerRight;
+                    hmdBlinker = gm.hmdBlinker;
+                }
+                //move the SteamVR_rig to the player's position
+                copyTransform(this.transform, SteamVR_Rig.transform);
+                //the controllers are the easy ones, just move them directly
+                copyTransform(controllerLeft.transform, handLeft.transform);
+                copyTransform(controllerRight.transform, handRight.transform);
+                //now move the head to the HMD position, this is actually the eye position
+                copyTransform(hmd.transform, head);
+
+                //move the feet to be in the tracking space, but on the ground (maybe do this with physics to ensure a good foot position later)
+                feet.position = Vector3.Scale(head.position, new Vector3(1, 0, 1)) + Vector3.Scale(SteamVR_Rig.position, new Vector3(0, 1, 0));
+                handleControllerInputs();
+
+            }
+            else {
+
+
+                float vertical = Input.GetAxis("Vertical");
+                float horizontal = Input.GetAxis("Horizontal");
+                transform.Translate(vertical * Time.fixedDeltaTime * (new Vector3(0, 0, 1)));
+                transform.Translate(horizontal * Time.fixedDeltaTime * (new Vector3(1, 0, 0)));
+
+
+            }
+            CmdSyncPlayer(head.transform.position, head.transform.rotation, handLeft.transform.position, handLeft.transform.rotation, handRight.transform.position, handRight.transform.rotation);
+        }
+        else {
+            //runs on all other clients and  the server
+            //move to the syncvars
+            head.position = Vector3.Lerp(head.position, headPos, .2f);
+            head.rotation = Quaternion.Slerp(head.rotation, headRot, .2f);
+            handLeft.transform.position = leftHandPos;
+            handLeft.transform.rotation = leftHandRot;
+            handRight.transform.position = rightHandPos;
+            handRight.transform.rotation = rightHandRot;
+
+        }
+
+
     }
 	
 	void Update () {
@@ -74,7 +120,7 @@ public class VRPlayer : NetworkBehaviour {
             //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
         }
 
-        int rightIndex = (int)controllerRight.index;
+        rightIndex = (int)controllerRight.index;
 
         if (rightIndex >= 0)
         {
