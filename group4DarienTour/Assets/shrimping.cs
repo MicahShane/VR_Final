@@ -10,6 +10,7 @@ public class shrimping : MonoBehaviour {
 	public string lhName;
 	public string rhName;
 	public GameObject sb;
+	public VRPlayer player;
 	//public Renderer rend;
 	private bool hideshow = false;
 	//public Transform[] parents;
@@ -47,6 +48,7 @@ public class shrimping : MonoBehaviour {
 	{
 		if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
 		{
+			player.shake();
 			dscript.logEvent(this.name);
 			
 			

@@ -92,7 +92,8 @@ public class HandController : MonoBehaviour {
 	{
         if (lastIntersection == null)
         {
-            lastIntersection = other.attachedRigidbody;
+			player.shake();
+			lastIntersection = other.attachedRigidbody;
         }
 
     }

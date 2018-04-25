@@ -32,7 +32,6 @@ public class floodSim : MonoBehaviour {
         target_scale = transform.localScale * 1.2f;
         halo = GetComponent("Halo");
         halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
-
     }
 
   
@@ -43,7 +42,6 @@ public class floodSim : MonoBehaviour {
        
         if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
 		{
-
             halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
             transform.localScale = Vector3.Lerp(transform.localScale, target_scale , 0.3f);
             
@@ -75,6 +73,7 @@ public class floodSim : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
 	{
+		
         player.shake();
         if (col.gameObject.name.Equals(lhName) || col.gameObject.name.Equals(rhName))
 		{
