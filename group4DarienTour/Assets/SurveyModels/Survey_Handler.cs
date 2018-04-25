@@ -7,11 +7,18 @@ public class Survey_Handler : MonoBehaviour
 
     public GameObject dlog;
     public dataLog dscript;
+    public GameObject parentSurvey;
 
     public GameObject leftHand;
     public GameObject rightHand;
     public string lhName;
     public string rhName;
+
+    private bool answered;
+    public GameObject triggerObject;
+    
+
+ 
 
 
     // Use this for initialization
@@ -21,6 +28,10 @@ public class Survey_Handler : MonoBehaviour
         lhName = leftHand.name;
         rhName = rightHand.name;
         dscript = dlog.GetComponent<dataLog>();
+        answered = false;
+        triggerObject = GameObject.Find("SurveyTrigger");
+
+       
 
     }
 
@@ -37,7 +48,10 @@ public class Survey_Handler : MonoBehaviour
         {
             Debug.Log("You have selected " + this.gameObject.name);
             dscript.logEvent(this.name);
-            //store some data!!!!!!!!!!!!!!
+            answered = true;
+            triggerObject.GetComponent<SurveyTrigger>().RemoveSurvey(this.transform.root.name);
         }
     }
+
+
 }

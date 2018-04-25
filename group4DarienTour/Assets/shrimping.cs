@@ -17,15 +17,26 @@ public class shrimping : MonoBehaviour {
 	public GameObject dlog;
 	public dataLog dscript;
 
-	// Use this for initialization
-	void Start()
+    private Vector3 original_scale;
+    private Vector3 target_scale;
+
+    public Component halo;
+
+    // Use this for initialization
+    void Start()
 	{
 		//parents = ShrimpBoat.GetComponentsInChildren<Transform>();
 		lhName = leftHand.name;
 		rhName = rightHand.name;
 
-		dscript = dlog.GetComponent<dataLog>();
-	}
+        original_scale = transform.localScale;
+        target_scale = transform.localScale * 1.2f;
+
+        dscript = dlog.GetComponent<dataLog>();
+
+        halo = GetComponent("Halo");
+        halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -61,4 +72,15 @@ public class shrimping : MonoBehaviour {
 
 		}
 	}
+    void OnTriggerStay(Collider col)
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, target_scale, 0.3f);
+        halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        transform.localScale = original_scale;
+        halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
+    }
 }

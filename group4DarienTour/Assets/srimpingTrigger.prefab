@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33513564844292276}
   - component: {fileID: 65622770159296636}
   - component: {fileID: 23674909260796068}
-  - component: {fileID: 114107507628161782}
   - component: {fileID: 114590444671887256}
+  - component: {fileID: 114138500289429404}
   m_Layer: 0
   m_Name: srimpingTrigger
   m_TagString: Untagged
@@ -37,9 +37,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800813423978994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.93, y: 1.632, z: 18.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0041165017, y: -0.28770652, z: -0.007696002, w: 0.9576789}
+  m_LocalPosition: {x: 0.02294071, y: 0.48748425, z: 0.014618612}
+  m_LocalScale: {x: 0.4172992, y: 0.08941722, z: 0.40714622}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 01adbc0a2a99d644cb4b524201b0e6a7, type: 2}
+  - {fileID: 2100000, guid: ed67353f975761248952760447805e59, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,12 +92,12 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800813423978994}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114107507628161782
+--- !u!114 &114138500289429404
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,23 +105,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1800813423978994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c265f64cd544e418259be6745f5101, type: 3}
+  m_Script: {fileID: 11500000, guid: 50664a133ac7ad44a91b10c42be97420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShrimpBoat_prefab: {fileID: 1416427696866174, guid: b2defe84e69cf5d4e9ed34f9817c9aba,
-    type: 2}
-  leftHand: {fileID: 1340816962816304, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
-  rightHand: {fileID: 1090384901247114, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
+  floodWater: {fileID: 1638352934446402, guid: 3d93a015ae28bca4680ed312a302fa3f, type: 2}
+  head: {fileID: 1894034293578832, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  leftHand: {fileID: 1910762269721904, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  rightHand: {fileID: 1820349169644530, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  player: {fileID: 114318908100523744, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
   lhName: 
   rhName: 
-  sb: {fileID: 0}
+  dlog: {fileID: 0}
+  dscript: {fileID: 0}
+  fw: {fileID: 0}
 --- !u!114 &114590444671887256
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800813423978994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fc119b4723c2b945af79b0b5171d74a, type: 3}
   m_Name: 

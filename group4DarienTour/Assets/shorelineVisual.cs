@@ -10,6 +10,7 @@ public class shorelineVisual : MonoBehaviour {
     public GameObject shore1800_Text;
     public GameObject shore1930_Text;
     public GameObject shore2000_Text;
+    public VRPlayer player;
 
 
     public GameObject leftHand;
@@ -23,6 +24,11 @@ public class shorelineVisual : MonoBehaviour {
 	public GameObject sl;
     public GameObject st;
 
+    private Vector3 original_scale;
+    private Vector3 target_scale;
+
+    public Component halo;
+
     private int counter;
 
 	void Start()
@@ -32,8 +38,12 @@ public class shorelineVisual : MonoBehaviour {
 		rhName = rightHand.name;
 		dscript = dlog.GetComponent<dataLog>();
         counter = 0;
-         
-	}
+        original_scale = transform.localScale;
+        target_scale = transform.localScale * 1.2f;
+        halo = GetComponent("Halo");
+        halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
+
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -45,7 +55,8 @@ public class shorelineVisual : MonoBehaviour {
 
         if (col.gameObject.name.Equals(rhName))
         {
-
+            
+            
             dscript.logEvent(this.name);
 
 
@@ -86,6 +97,18 @@ public class shorelineVisual : MonoBehaviour {
                 counter = 0;
             }
         }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, target_scale, 0.3f);
+        halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        transform.localScale = original_scale;
+        halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
     }
 
 

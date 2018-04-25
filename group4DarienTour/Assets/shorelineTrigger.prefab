@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199004510729152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.462, y: 1.632, z: -5.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0047619645, y: -0.36885577, z: -0.007314215, w: 0.92944574}
+  m_LocalPosition: {x: -0.01700037, y: 0.48719484, z: -0.003398826}
+  m_LocalScale: {x: 0.45812726, y: 0.099185206, z: 0.4563813}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.849001, z: 0}
 --- !u!23 &23822733674792840
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 01adbc0a2a99d644cb4b524201b0e6a7, type: 2}
+  - {fileID: 2100000, guid: ed67353f975761248952760447805e59, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199004510729152}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -114,18 +114,28 @@ MonoBehaviour:
     type: 2}
   shore2000_Prefab: {fileID: 1131385359295914, guid: c090afe365d203443ab36d4ef8722775,
     type: 2}
-  leftHand: {fileID: 1340816962816304, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
-  rightHand: {fileID: 1090384901247114, guid: 402873b51c5b1724796c42f3ef15d0e1, type: 2}
+  shore1800_Text: {fileID: 1935580832722972, guid: 3b22c7f10cd96a34f931b8706e9d5328,
+    type: 2}
+  shore1930_Text: {fileID: 1834038743825252, guid: b6b6ff7ac9c90f840a7c136dc54a4e22,
+    type: 2}
+  shore2000_Text: {fileID: 1896532013632400, guid: ea182f822f149a142a5c262d827bdb14,
+    type: 2}
+  player: {fileID: 114318908100523744, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  leftHand: {fileID: 1910762269721904, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
+  rightHand: {fileID: 1820349169644530, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
   lhName: 
   rhName: 
+  dlog: {fileID: 0}
+  dscript: {fileID: 0}
   sl: {fileID: 0}
+  st: {fileID: 0}
 --- !u!114 &114883866092575492
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199004510729152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fc119b4723c2b945af79b0b5171d74a, type: 3}
   m_Name: 
