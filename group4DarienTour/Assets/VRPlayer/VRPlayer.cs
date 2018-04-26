@@ -162,7 +162,7 @@ public class VRPlayer : NetworkBehaviour {
 
     public void shake() {
         int i = (int)controllerRight.index;
-        SteamVR_Controller.Input(i).TriggerHapticPulse(4000);
+        SteamVR_Controller.Input(i).TriggerHapticPulse(500);
     }
 
     private void FixedUpdate()

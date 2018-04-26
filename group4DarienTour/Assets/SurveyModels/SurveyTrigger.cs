@@ -10,7 +10,6 @@ public class SurveyTrigger : MonoBehaviour {
     public GameObject survey2;
     public string lhName;
     public string rhName;
-	public VRPlayer player;
 
     private Vector3 original_scale;
     private Vector3 target_scale;
@@ -43,6 +42,7 @@ public class SurveyTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+
         if (col.gameObject.name.Equals(rhName) || col.gameObject.name.Equals(lhName))
         {
             s1 = Instantiate(survey1);
@@ -66,12 +66,11 @@ public class SurveyTrigger : MonoBehaviour {
     {
         if (p == "Survey1(Clone)")
         {
-
             Destroy(s1);
         }
         else if(p == "Survey2(Clone)")
         {
-			Destroy(s2);
+            Destroy(s2);
         }
         else
         {
