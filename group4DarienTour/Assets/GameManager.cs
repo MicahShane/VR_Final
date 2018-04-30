@@ -12,8 +12,15 @@ public class GameManager: MonoBehaviour {
 	public SteamVR_TrackedObject controllerRight;
 	// Use this for initialization
 	void Start () {
-		
+
+	bool exists = System.IO.Directory.Exists("./Resources");
+
+	if(!exists)
+    	System.IO.Directory.CreateDirectory("./Resources");
+		System.IO.Directory.CreateDirectory("./Resources/Photo");
+		System.IO.Directory.CreateDirectory("./Resources/DataLog");
 	}
+	
 	
 	// Update is called once per frame
 	void Update () {

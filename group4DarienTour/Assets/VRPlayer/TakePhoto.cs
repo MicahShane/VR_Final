@@ -75,7 +75,7 @@ public class TakePhoto : MonoBehaviour
         // Encode texture into PNG
         byte[] bytes = screenCap.EncodeToPNG();
         //Object.Destroy(screenCap);
-        string path = Application.dataPath + "/Resources/Photo/SavedScreen_" + index + ".png";
+        string path = "./Resources/Photo/SavedScreen_" + index + ".png";
         // For testing purposes, also write to a file in the project folder
         File.WriteAllBytes(path, bytes);
         shot = true;

@@ -41,8 +41,8 @@ public class VRPlayer : NetworkBehaviour {
 	Quaternion rightHandRot;
 	void Start () {
 		head.transform.position = new Vector3(0, 2, 0);
-        isHoldingMicrophone = true;
-        Ourcamera.SetActive(false);
+        isHoldingMicrophone = false;
+        microphone.SetActive(false);
         rightIndex = 0;
         if (isLocalPlayer) {
             if (UnityEngine.XR.XRSettings.enabled) {
@@ -119,8 +119,11 @@ public class VRPlayer : NetworkBehaviour {
             //saveMaxLeft = leftHand.intersected.maxAngularVelocity;
             //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
         }
-
+		try{
         rightIndex = (int)controllerRight.index;
+		}catch{
+
+		}
 
         if (rightIndex >= 0)
         {
@@ -161,8 +164,12 @@ public class VRPlayer : NetworkBehaviour {
     }
 
     public void shake() {
-        int i = (int)controllerRight.index;
-        SteamVR_Controller.Input(i).TriggerHapticPulse(500);
+		try{
+			int i = (int)controllerRight.index;
+			SteamVR_Controller.Input(i).TriggerHapticPulse(500);
+		}catch{
+
+		}
     }
 
     private void FixedUpdate()

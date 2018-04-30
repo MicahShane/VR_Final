@@ -25,7 +25,7 @@ public class dataLog : MonoBehaviour {
 			writer = null;
 		}
         //create a file
-        string filename = Application.dataPath + "/Resources/DataLog/" + identifier +"_" + (long)(System.DateTime.UtcNow.Subtract(new System.DateTime(1970,1,1)).TotalSeconds) +  ".csv";
+        string filename = "./Resources/DataLog/" + identifier +"_" + (long)(System.DateTime.UtcNow.Subtract(new System.DateTime(1970,1,1)).TotalSeconds) +  ".csv";
 		Debug.Log("creating: " + filename);
 		writer = new StreamWriter(filename);
 	}

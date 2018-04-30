@@ -91,7 +91,8 @@ public class HandController : MonoBehaviour {
 	private void OnTriggerStay(Collider other)
 	{
         if (lastIntersection == null)
-        {
+        {	
+			player.shake();
             lastIntersection = other.attachedRigidbody;
         }
 
