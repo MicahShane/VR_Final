@@ -1418,48 +1418,6 @@ Transform:
   m_Father: {fileID: 301019165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &386088551
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.2626648
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.024039745
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.0907135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153611720349818, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 792c76e0d900ff44b80bc8f89748e580, type: 2}
-  m_IsPrefabParent: 0
 --- !u!114 &391297637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5606,7 +5564,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dbf6195ea4cc3a84d85f50486d218c10, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6bbe92ed5e4e4b1448c299ddf9aabf76, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5737,7 +5695,7 @@ MonoBehaviour:
   sb: {fileID: 0}
   dlog: {fileID: 518761958}
   dscript: {fileID: 0}
-  halo: {fileID: 0}
+  halo: {fileID: 1319119158}
 --- !u!122 &1319119158
 Halo:
   m_ObjectHideFlags: 0
@@ -5776,7 +5734,7 @@ MonoBehaviour:
   survey2: {fileID: 1994996529145070, guid: 56c2b93459ef23a4da0174a49e631acc, type: 2}
   lhName: 
   rhName: 
-  halo: {fileID: 0}
+  halo: {fileID: 1332543127}
   s1: {fileID: 0}
   s2: {fileID: 0}
 --- !u!122 &1332543127
@@ -6182,6 +6140,11 @@ Prefab:
       propertyPath: dlog
       value: 
       objectReference: {fileID: 518761958}
+    - target: {fileID: 114672338499239688, guid: 4c417a35bd2b2b14494d4e6504640be1,
+        type: 2}
+      propertyPath: halo
+      value: 
+      objectReference: {fileID: 633104535}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c417a35bd2b2b14494d4e6504640be1, type: 2}
   m_IsPrefabParent: 0
