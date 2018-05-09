@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR;
 using UnityEngine.Networking;
+
 public class VRPlayer : NetworkBehaviour {
 	public GameObject cubePrefab;
     public GameObject microphone;
@@ -26,6 +27,7 @@ public class VRPlayer : NetworkBehaviour {
     public Rigidbody rightHeldObject;
     public float saveMaxRight;
     public int rightIndex;
+    private SteamVR_Controller.Device device;
     // Use this for initialization
     [SyncVar]
 	Vector3 headPos;
@@ -44,6 +46,7 @@ public class VRPlayer : NetworkBehaviour {
         isHoldingMicrophone = false;
         microphone.SetActive(false);
         rightIndex = 0;
+        device = null;
         if (isLocalPlayer) {
             if (UnityEngine.XR.XRSettings.enabled) {
                 if (SteamVR_Rig == null) {
@@ -93,16 +96,18 @@ public class VRPlayer : NetworkBehaviour {
 
 
     }
-	
-	void Update () {
-	
-	}
-
-
     private void LateUpdate()
     {
         //left hand hold
-        if (Input.GetButtonDown("YButton"))
+         
+        try{
+            device = SteamVR_Controller.Input((int)controllerLeft.index);
+            rightIndex = (int)controllerRight.index;
+        }
+        catch {
+        }
+        
+        if (device != null && device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
         {
             if (isHoldingMicrophone)
             {
@@ -116,15 +121,9 @@ public class VRPlayer : NetworkBehaviour {
                 microphone.SetActive(true);
                 isHoldingMicrophone = true;
             }
-            //saveMaxLeft = leftHand.intersected.maxAngularVelocity;
-            //leftHand.intersected.maxAngularVelocity = Mathf.Infinity;
         }
-		try{
-        rightIndex = (int)controllerRight.index;
-		}catch{
-
-		}
-
+        
+          
         if (rightIndex >= 0)
         {
             float rightTrigger = SteamVR_Controller.Input(rightIndex).GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger).magnitude;
@@ -157,9 +156,6 @@ public class VRPlayer : NetworkBehaviour {
                 q.ToAngleAxis (out angle, out axis);
                 rightHeldObject.angularVelocity =  axis * angle * Mathf.Deg2Rad / Time.deltaTime;
             }
-
-
-
         }
     }
 
@@ -172,14 +168,10 @@ public class VRPlayer : NetworkBehaviour {
 		}
     }
 
-    private void FixedUpdate()
-	{
-		if (isLocalPlayer)
-		{
-			if (UnityEngine.XR.XRSettings.enabled)
-			{
-				if (SteamVR_Rig == null)
-				{
+    private void FixedUpdate(){
+		if (isLocalPlayer){
+			if (UnityEngine.XR.XRSettings.enabled){
+				if (SteamVR_Rig == null){
 					GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 					SteamVR_Rig = gm.vrCameraRig.transform;
 					hmd = gm.hmd;
@@ -199,21 +191,16 @@ public class VRPlayer : NetworkBehaviour {
 				feet.position = Vector3.Scale(head.position, new Vector3(1, 0, 1)) + Vector3.Scale(SteamVR_Rig.position, new Vector3(0, 1, 0));
 				handleControllerInputs();
 
-			}
-			else
-			{
+			}else{
 				
 
 				float vertical = Input.GetAxis("Vertical");
 				float horizontal = Input.GetAxis("Horizontal");
 				transform.Translate(vertical * Time.fixedDeltaTime * (new Vector3(0, 0, 1)));
 				transform.Translate(horizontal * Time.fixedDeltaTime * (new Vector3(1, 0, 0)));
-
-
 			}
 			CmdSyncPlayer(head.transform.position,head.transform.rotation, handLeft.transform.position, handLeft.transform.rotation, handRight.transform.position, handRight.transform.rotation);
-		}else
-		{
+		}else{
 			//runs on all other clients and  the server
 			//move to the syncvars
 			head.position = Vector3.Lerp(head.position, headPos,.2f);
@@ -222,11 +209,8 @@ public class VRPlayer : NetworkBehaviour {
 			handLeft.transform.rotation = leftHandRot;
 			handRight.transform.position = rightHandPos;
 			handRight.transform.rotation = rightHandRot;
-
 		}
-
 	}
-
 
 	[Command]
 	void CmdSyncPlayer(Vector3 pos, Quaternion rot, Vector3 lhpos, Quaternion lhrot, Vector3 rhpos, Quaternion rhrot )

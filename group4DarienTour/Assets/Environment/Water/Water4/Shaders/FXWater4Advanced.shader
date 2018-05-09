@@ -42,7 +42,6 @@ CGINCLUDE
 
 	#include "UnityCG.cginc"
 	#include "WaterInclude.cginc"
-
 	struct appdata
 	{
 		float4 vertex : POSITION;
