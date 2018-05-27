@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 1d1aee98de335134abaf1cbacd0a22d3
+timeCreated: 1527281077
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: group_0
+    100002: group_1
+    100004: group_1 1
+    100006: hanger
+    100008: hanger 1
+    100010: ID11
+    100012: ID117
+    100014: ID117 1
+    100016: ID125
+    100018: ID125 1
+    100020: ID165
+    100022: ID165 1
+    100024: ID178
+    100026: ID184
+    100028: ID19
+    100030: ID192
+    100032: ID198
+    100034: ID204
+    100036: ID210
+    100038: ID216
+    100040: ID222
+    100042: ID228
+    100044: ID38
+    100046: ID38 1
+    100048: ID52
+    100050: ID52 1
+    100052: ID68
+    100054: ID68 1
+    100056: ID68 2
+    100058: ID68 3
+    100060: ID68 4
+    100062: ID68 5
+    100064: ID93
+    100066: ID93 1
+    100068: instance_0
+    100070: instance_1
+    100072: instance_1 1
+    100074: instance_10
+    100076: instance_11
+    100078: instance_12
+    100080: instance_12 1
+    100082: instance_13
+    100084: instance_13 1
+    100086: instance_14
+    100088: instance_2
+    100090: instance_2 1
+    100092: instance_3
+    100094: instance_3 1
+    100096: instance_4
+    100098: instance_4 1
+    100100: instance_5
+    100102: instance_5 1
+    100104: instance_6
+    100106: instance_6 1
+    100108: instance_7
+    100110: instance_7 1
+    100112: instance_8
+    100114: instance_8 1
+    100116: instance_9
+    100118: instance_9 1
+    100120: Last Saved SketchUp View
+    100122: light
+    100124: light 1
+    100126: light 2
+    100128: light 3
+    100130: light 4
+    100132: light 5
+    100134: Pedestrian_don_t_walk_traffic_sign
+    100136: Pedestrian_don_t_walk_traffic_sign 1
+    100138: ring
+    100140: ring 1
+    100142: ring 2
+    100144: ring 3
+    100146: sun_shield
+    100148: sun_shield 1
+    100150: traffic_arm
+    100152: traffic_arm 1
+    100154: traffic_arm 2
+    100156: traffic_arm 3
+    100158: traffic_arm_1
+    100160: traffic_arm_1 1
+    100162: traffic_arm_1 2
+    100164: traffic_arm_1 3
+    100166: //RootNode
+    100168: TrafficSignal_Stoplight_3lights_12in
+    100170: TrafficSignal_Stoplight_3lights_12in 1
+    400000: group_0
+    400002: group_1
+    400004: group_1 1
+    400006: hanger
+    400008: hanger 1
+    400010: ID11
+    400012: ID117
+    400014: ID117 1
+    400016: ID125
+    400018: ID125 1
+    400020: ID165
+    400022: ID165 1
+    400024: ID178
+    400026: ID184
+    400028: ID19
+    400030: ID192
+    400032: ID198
+    400034: ID204
+    400036: ID210
+    400038: ID216
+    400040: ID222
+    400042: ID228
+    400044: ID38
+    400046: ID38 1
+    400048: ID52
+    400050: ID52 1
+    400052: ID68
+    400054: ID68 1
+    400056: ID68 2
+    400058: ID68 3
+    400060: ID68 4
+    400062: ID68 5
+    400064: ID93
+    400066: ID93 1
+    400068: instance_0
+    400070: instance_1
+    400072: instance_1 1
+    400074: instance_10
+    400076: instance_11
+    400078: instance_12
+    400080: instance_12 1
+    400082: instance_13
+    400084: instance_13 1
+    400086: instance_14
+    400088: instance_2
+    400090: instance_2 1
+    400092: instance_3
+    400094: instance_3 1
+    400096: instance_4
+    400098: instance_4 1
+    400100: instance_5
+    400102: instance_5 1
+    400104: instance_6
+    400106: instance_6 1
+    400108: instance_7
+    400110: instance_7 1
+    400112: instance_8
+    400114: instance_8 1
+    400116: instance_9
+    400118: instance_9 1
+    400120: Last Saved SketchUp View
+    400122: light
+    400124: light 1
+    400126: light 2
+    400128: light 3
+    400130: light 4
+    400132: light 5
+    400134: Pedestrian_don_t_walk_traffic_sign
+    400136: Pedestrian_don_t_walk_traffic_sign 1
+    400138: ring
+    400140: ring 1
+    400142: ring 2
+    400144: ring 3
+    400146: sun_shield
+    400148: sun_shield 1
+    400150: traffic_arm
+    400152: traffic_arm 1
+    400154: traffic_arm 2
+    400156: traffic_arm 3
+    400158: traffic_arm_1
+    400160: traffic_arm_1 1
+    400162: traffic_arm_1 2
+    400164: traffic_arm_1 3
+    400166: //RootNode
+    400168: TrafficSignal_Stoplight_3lights_12in
+    400170: TrafficSignal_Stoplight_3lights_12in 1
+    2100000: __Charcoal_
+    2100002: material
+    2100004: Lisanne_Hammer
+    2100006: __DarkGray_
+    2100008: __Red_
+    2100010: __Orange_
+    2100012: __Green_
+    2100014: __Gold_
+    2100016: __Yellow_
+    2100018: don_t_walk2
+    2300000: group_0
+    2300002: hanger
+    2300004: hanger 1
+    2300006: ID11
+    2300008: ID117
+    2300010: ID117 1
+    2300012: ID125
+    2300014: ID125 1
+    2300016: ID165
+    2300018: ID165 1
+    2300020: ID178
+    2300022: ID184
+    2300024: ID19
+    2300026: ID192
+    2300028: ID198
+    2300030: ID204
+    2300032: ID210
+    2300034: ID216
+    2300036: ID222
+    2300038: ID228
+    2300040: ID38
+    2300042: ID38 1
+    2300044: ID52
+    2300046: ID52 1
+    2300048: ID68
+    2300050: ID68 1
+    2300052: ID68 2
+    2300054: ID68 3
+    2300056: ID68 4
+    2300058: ID68 5
+    2300060: ID93
+    2300062: ID93 1
+    2300064: light
+    2300066: light 1
+    2300068: light 2
+    2300070: light 3
+    2300072: light 4
+    2300074: light 5
+    2300076: Pedestrian_don_t_walk_traffic_sign
+    2300078: Pedestrian_don_t_walk_traffic_sign 1
+    2300080: ring
+    2300082: ring 1
+    2300084: ring 2
+    2300086: ring 3
+    2300088: sun_shield
+    2300090: sun_shield 1
+    2300092: traffic_arm
+    2300094: traffic_arm 1
+    2300096: traffic_arm 2
+    2300098: traffic_arm 3
+    2300100: traffic_arm_1
+    2300102: traffic_arm_1 1
+    2300104: traffic_arm_1 2
+    2300106: traffic_arm_1 3
+    2300108: //RootNode
+    2300110: TrafficSignal_Stoplight_3lights_12in
+    2300112: TrafficSignal_Stoplight_3lights_12in 1
+    3300000: group_0
+    3300002: hanger
+    3300004: hanger 1
+    3300006: ID11
+    3300008: ID117
+    3300010: ID117 1
+    3300012: ID125
+    3300014: ID125 1
+    3300016: ID165
+    3300018: ID165 1
+    3300020: ID178
+    3300022: ID184
+    3300024: ID19
+    3300026: ID192
+    3300028: ID198
+    3300030: ID204
+    3300032: ID210
+    3300034: ID216
+    3300036: ID222
+    3300038: ID228
+    3300040: ID38
+    3300042: ID38 1
+    3300044: ID52
+    3300046: ID52 1
+    3300048: ID68
+    3300050: ID68 1
+    3300052: ID68 2
+    3300054: ID68 3
+    3300056: ID68 4
+    3300058: ID68 5
+    3300060: ID93
+    3300062: ID93 1
+    3300064: light
+    3300066: light 1
+    3300068: light 2
+    3300070: light 3
+    3300072: light 4
+    3300074: light 5
+    3300076: Pedestrian_don_t_walk_traffic_sign
+    3300078: Pedestrian_don_t_walk_traffic_sign 1
+    3300080: ring
+    3300082: ring 1
+    3300084: ring 2
+    3300086: ring 3
+    3300088: sun_shield
+    3300090: sun_shield 1
+    3300092: traffic_arm
+    3300094: traffic_arm 1
+    3300096: traffic_arm 2
+    3300098: traffic_arm 3
+    3300100: traffic_arm_1
+    3300102: traffic_arm_1 1
+    3300104: traffic_arm_1 2
+    3300106: traffic_arm_1 3
+    3300108: //RootNode
+    3300110: TrafficSignal_Stoplight_3lights_12in
+    3300112: TrafficSignal_Stoplight_3lights_12in 1
+    4300000: SketchUp
+    4300002: ID178
+    4300004: ID184
+    4300006: ID192
+    4300008: ID198
+    4300010: ID204
+    4300012: ID210
+    4300014: ID216
+    4300016: ID222
+    4300018: ID228
+    4300020: group_0
+    4300022: ID11
+    4300024: ID19
+    4300026: TrafficSignal_Stoplight_3lights_12in
+    4300028: ID117
+    4300030: ID125
+    4300032: traffic_arm
+    4300034: ID38
+    4300036: traffic_arm
+    4300038: ID52
+    4300040: light
+    4300042: ID68
+    4300044: hanger
+    4300046: ID93
+    4300048: ring
+    4300050: sun_shield
+    4300052: Pedestrian_don_t_walk_traffic_sign
+    4300054: ID165
+    4300056: traffic_arm_1
+    4300058: traffic_arm_1
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
